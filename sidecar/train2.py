@@ -583,12 +583,14 @@ def train_one(base_args, name, prefix, overrides, ctx, budget):
     save(sidecar, args.out, steps_done, args, name=prefix + "_final.pt")
     if is_xla(device):
         log(f"[{name}] sample generation skipped on xla: one token per graph recompiles every step")
+    elif args.sample_tokens <= 0:
+        log(f"[{name}] sample generation skipped: --sample_tokens 0")
     else:
         try:
             tok = ctx["tok"]
             eos_id = tok.eos_token_id if tok.eos_token_id is not None else 7
             prompt = ctx["val_seqs"][0][0][:512]
-            plain, corrected_tokens = generate(backbone, sidecar, read_layers, prompt, 200,
+            plain, corrected_tokens = generate(backbone, sidecar, read_layers, prompt, args.sample_tokens,
                                                device, use_err, emb, eos_id)
             log(f"[{name}] sample prompt tail " + repr(tok.decode(prompt[-60:])))
             log(f"[{name}] sample backbone    " + repr(tok.decode(plain[len(prompt):])))
@@ -631,6 +633,7 @@ def main():
     ap.add_argument("--cache_len", type=int, default=8192)
     ap.add_argument("--cache_tokens", type=int, default=2097152)
     ap.add_argument("--fill_budget_s", type=float, default=0.0)
+    ap.add_argument("--sample_tokens", type=int, default=200)
     ap.add_argument("--cache_ram_frac", type=float, default=0.6)
     ap.add_argument("--cache_reserve_gb", type=float, default=4.0)
     ap.add_argument("--refill_frac", type=float, default=0.05)
