@@ -1,0 +1,1414 @@
+{
+ "generated_at_utc": "2026-10-10T16:08:14+00:00",
+ "method": {
+  "hash": "blake2b(digest_size=16)",
+  "key_definition": "first message with role=='user'; prefix = first N chars of its content",
+  "streaming": true,
+  "files": {
+   "train": "C:/dev/trainlfm/trainingdata\\train_messages.jsonl",
+   "val": "C:/dev/trainlfm/trainingdata\\val_messages.jsonl"
+  }
+ },
+ "rows": {
+  "train": 7017,
+  "val": 143
+ },
+ "prefix_collision_train": {
+  "50": {
+   "rows": 7017,
+   "unique_keys": 3589,
+   "rows_in_collision": 3995,
+   "share_rows_affected": 0.5693,
+   "largest_cluster": 367,
+   "clusters_gt1": 424
+  },
+  "200": {
+   "rows": 7017,
+   "unique_keys": 4591,
+   "rows_in_collision": 2940,
+   "share_rows_affected": 0.419,
+   "largest_cluster": 95,
+   "clusters_gt1": 371
+  },
+  "1000": {
+   "rows": 7017,
+   "unique_keys": 5196,
+   "rows_in_collision": 2257,
+   "share_rows_affected": 0.3216,
+   "largest_cluster": 95,
+   "clusters_gt1": 293
+  },
+  "full_first_user": {
+   "rows": 7017,
+   "unique_keys": 5544,
+   "rows_in_collision": 1861,
+   "share_rows_affected": 0.2652,
+   "largest_cluster": 95,
+   "clusters_gt1": 245
+  },
+  "full_row": {
+   "rows": 7017,
+   "unique_keys": 7160,
+   "rows_in_collision": 0,
+   "share_rows_affected": 0.0,
+   "largest_cluster": 1,
+   "clusters_gt1": 0
+  }
+ },
+ "top_clusters_train": {
+  "50": [
+   {
+    "cluster_size": 367,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 184,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 125,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 121,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 95,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 77,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 76,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 69,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 60,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 60,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   }
+  ],
+  "200": [
+   {
+    "cluster_size": 95,
+    "sample_120": "keep going",
+    "distinct_full_first_user": 1
+   },
+   {
+    "cluster_size": 62,
+    "sample_120": "Use the gm skill for this; code questions go to codeinsight (callers/impact) first, then codesearch, and Read only a loc",
+    "distinct_full_first_user": 61
+   },
+   {
+    "cluster_size": 61,
+    "sample_120": "Use the gm skill for this task (invoke Skill(skill=\"gm\") first: codesearch instead of Grep/Glob, exec_js instead of raw ",
+    "distinct_full_first_user": 61
+   },
+   {
+    "cluster_size": 59,
+    "sample_120": "we want phase2a to be able to predict exactly these moments without moments.json",
+    "distinct_full_first_user": 1
+   },
+   {
+    "cluster_size": 58,
+    "sample_120": "# gm\n\n**A turn ending without a tool call is a stop; stopping mid-chain is the cardinal failure.** Agents read only tool",
+    "distinct_full_first_user": 51
+   },
+   {
+    "cluster_size": 45,
+    "sample_120": "Use the gm skill first (Skill(skill=\"gm\")); the last several passes found its mandated spool/daemon workflow blocks real",
+    "distinct_full_first_user": 44
+   },
+   {
+    "cluster_size": 43,
+    "sample_120": "go ahead and dot that",
+    "distinct_full_first_user": 1
+   },
+   {
+    "cluster_size": 39,
+    "sample_120": "<task-notification>\n<summary>Goal check-in: background work still running</summary>\n</task-notification>",
+    "distinct_full_first_user": 1
+   },
+   {
+    "cluster_size": 39,
+    "sample_120": "we're working on the supabase/functions/image folder, we want to perfect the code that produces the footstep predictions",
+    "distinct_full_first_user": 1
+   },
+   {
+    "cluster_size": 38,
+    "sample_120": "go head and do that, there should be no restrictions on cluster sizes there should be plenty of metrics that can indicat",
+    "distinct_full_first_user": 1
+   }
+  ],
+  "1000": [
+   {
+    "cluster_size": 95,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 59,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 58,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 43,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 41,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 39,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 39,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 38,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 37,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 37,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   }
+  ],
+  "full_first_user": [
+   {
+    "cluster_size": 95,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 59,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 43,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 39,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 39,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 38,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 37,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 37,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 36,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   },
+   {
+    "cluster_size": 34,
+    "sample_120": "",
+    "distinct_full_first_user": null
+   }
+  ],
+  "full_row": [
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   },
+   {
+    "cluster_size": 1,
+    "sample_120": "<exact whole-row duplicate>"
+   }
+  ]
+ },
+ "val_contamination": {
+  "val_rows": 143,
+  "val_unique_prefix200": 132,
+  "contaminated_prefixes": 132,
+  "val_rows_affected": 143,
+  "share_val_rows_affected": 1.0,
+  "n_shared_preamble_only": 24,
+  "n_identical_task_prompt": 108,
+  "representative_examples": [
+   {
+    "class": "identical_task_prompt",
+    "val_rows": 2,
+    "train_rows": 95,
+    "distinct_full_first_user": 1,
+    "prefix_120": "keep going"
+   },
+   {
+    "class": "distinct_tasks_shared_preamble",
+    "val_rows": 2,
+    "train_rows": 61,
+    "distinct_full_first_user": 61,
+    "prefix_120": "Use the gm skill for this task (invoke Skill(skill=\"gm\") first: codesearch instead of Grep/Glob, exec_js instead of raw "
+   },
+   {
+    "class": "identical_task_prompt",
+    "val_rows": 3,
+    "train_rows": 28,
+    "distinct_full_first_user": 1,
+    "prefix_120": "go ahead and run node blog-generator-cli.js \"test\" theres no server logs appearing when I run it"
+   },
+   {
+    "class": "distinct_tasks_shared_preamble",
+    "val_rows": 2,
+    "train_rows": 21,
+    "distinct_full_first_user": 21,
+    "prefix_120": "Use ordinary Read/Grep/Bash/PowerShell/Edit/git directly — prior passes found the `gm` skill's mandated workflow gets in"
+   },
+   {
+    "class": "distinct_tasks_shared_preamble",
+    "val_rows": 3,
+    "train_rows": 8,
+    "distinct_full_first_user": 8,
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\n   **Governing goal (still active, from earlier sessions)**: \"lets resume our a"
+   }
+  ],
+  "all_contaminated_prefixes": [
+   {
+    "prefix_120": "go ahead and run node blog-generator-cli.js \"test\" theres no server logs appearing when I run it",
+    "val_rows": 3,
+    "train_rows": 28,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 28,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\n   **Governing goal (still active, from earlier sessions)**: \"lets resume our a",
+    "val_rows": 3,
+    "train_rows": 8,
+    "distinct_full_first_user": 8,
+    "distinct_full_rows": 8,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "keep going",
+    "val_rows": 2,
+    "train_rows": 95,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 95,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this task (invoke Skill(skill=\"gm\") first: codesearch instead of Grep/Glob, exec_js instead of raw ",
+    "val_rows": 2,
+    "train_rows": 61,
+    "distinct_full_first_user": 61,
+    "distinct_full_rows": 61,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "we want phase2a to be able to predict exactly these moments without moments.json",
+    "val_rows": 2,
+    "train_rows": 59,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 59,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "go ahead and deploy it and run it to test, tweak it and repeat till you get it working as expecte",
+    "val_rows": 2,
+    "train_rows": 30,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 30,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use ordinary Read/Grep/Bash/PowerShell/Edit/git directly — prior passes found the `gm` skill's mandated workflow gets in",
+    "val_rows": 2,
+    "train_rows": 21,
+    "distinct_full_first_user": 21,
+    "distinct_full_rows": 21,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "use the gm skill for this. We are mid-way through `git merge --no-commit origin/claude/modest-feynman-3zpzop` in the wor",
+    "val_rows": 2,
+    "train_rows": 5,
+    "distinct_full_first_user": 5,
+    "distinct_full_rows": 5,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "You are an expert Canadian medical educator. Extract MCCQE1 flashcards from this textbook text.\n\nTEXT FROM TORONTO NOTES",
+    "val_rows": 2,
+    "train_rows": 4,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 4,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this; code questions go to codeinsight (callers/impact) first, then codesearch, and Read only a loc",
+    "val_rows": 1,
+    "train_rows": 62,
+    "distinct_full_first_user": 61,
+    "distinct_full_rows": 62,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "# gm\n\n**A turn ending without a tool call is a stop; stopping mid-chain is the cardinal failure.** Agents read only tool",
+    "val_rows": 1,
+    "train_rows": 58,
+    "distinct_full_first_user": 51,
+    "distinct_full_rows": 58,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "Use the gm skill first (Skill(skill=\"gm\")); the last several passes found its mandated spool/daemon workflow blocks real",
+    "val_rows": 1,
+    "train_rows": 45,
+    "distinct_full_first_user": 44,
+    "distinct_full_rows": 45,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "go ahead and dot that",
+    "val_rows": 1,
+    "train_rows": 43,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 43,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "we're working on the supabase/functions/image folder, we want to perfect the code that produces the footstep predictions",
+    "val_rows": 1,
+    "train_rows": 39,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 39,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "now you should iterate on training it and running it and editing the code till you can get the prediction from the ml to",
+    "val_rows": 1,
+    "train_rows": 37,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 37,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "These are the git diff from the files which were recently edited sorted by the least recent to the most recent:\n<diff_re",
+    "val_rows": 1,
+    "train_rows": 37,
+    "distinct_full_first_user": 37,
+    "distinct_full_rows": 37,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "do you remember what we did last?",
+    "val_rows": 1,
+    "train_rows": 34,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 34,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<fork-boilerplate>\nYou are a worker fork. The transcript above is the parent's history — inherited reference, not your s",
+    "val_rows": 1,
+    "train_rows": 33,
+    "distinct_full_first_user": 33,
+    "distinct_full_rows": 33,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "You are casey, the friendly first point of contact for an animal-disease\nreporting service in rural South Africa. The pe",
+    "val_rows": 1,
+    "train_rows": 31,
+    "distinct_full_first_user": 14,
+    "distinct_full_rows": 31,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "Use the gm skill for this work (Skill(skill=\"gm\") first; the gm MCP tool `mcp__gm__gm` is connected -- use its codesearc",
+    "val_rows": 1,
+    "train_rows": 28,
+    "distinct_full_first_user": 26,
+    "distinct_full_rows": 28,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "we're working on the supabase/functions/image folder, we want to perfect the code that produces the footstep predictions",
+    "val_rows": 1,
+    "train_rows": 25,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 25,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "go ahead and do that, keep going till you're satisfied it works",
+    "val_rows": 1,
+    "train_rows": 20,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 20,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "# gm\r\n\n**Done is what plugkit says is done — never your claim.** The COMPLETE gate is the single arbiter. If the chain i",
+    "val_rows": 1,
+    "train_rows": 20,
+    "distinct_full_first_user": 10,
+    "distinct_full_rows": 20,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "run.sh is supposed to test it and train.sh is supposed to test it, go ahead and iterate on fixing the code and running a",
+    "val_rows": 1,
+    "train_rows": 19,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 19,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "You are working in C:\\dev\\spoint (spoint browser game engine). Work on `main`. Commit only as lanmower (657315+lanmower@",
+    "val_rows": 1,
+    "train_rows": 18,
+    "distinct_full_first_user": 18,
+    "distinct_full_rows": 18,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "You are an expert Canadian medical educator. Extract MCCQE1 flashcards from this textbook text.\n\nTEXT FROM TORONTO NOTES",
+    "val_rows": 1,
+    "train_rows": 17,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 17,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "[Workflow harness — user request] The harness relays, verbatim and indented below, the user request that triggered this ",
+    "val_rows": 1,
+    "train_rows": 16,
+    "distinct_full_first_user": 16,
+    "distinct_full_rows": 16,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "we're trying to predict the actual clusters, there should be strong correlations available for instance a foot is usuall",
+    "val_rows": 1,
+    "train_rows": 16,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 16,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "# gm\r\n\n**The conversation literally stops the instant a response contains no tool call -- this is the entire mechanism, ",
+    "val_rows": 1,
+    "train_rows": 15,
+    "distinct_full_first_user": 14,
+    "distinct_full_rows": 15,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "we dont want the override at all, we want it to be based on the ML output, remove the override and improve the ML output",
+    "val_rows": 1,
+    "train_rows": 15,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 15,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "ok but we want it to use the ml model to output not the override, get that as good as you can get it",
+    "val_rows": 1,
+    "train_rows": 14,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 14,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this work (load it via Skill(skill=\"gm\") first). Route all code/file/symbol discovery through gm's ",
+    "val_rows": 1,
+    "train_rows": 12,
+    "distinct_full_first_user": 12,
+    "distinct_full_rows": 12,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "You are an entity extraction specialist for unstructured text. NEVER extract abstract concepts, feelings, or generic wor",
+    "val_rows": 1,
+    "train_rows": 11,
+    "distinct_full_first_user": 11,
+    "distinct_full_rows": 11,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "You are an expert Canadian medical educator. Extract MCCQE1 flashcards from this textbook text.\n\nTEXT FROM TORONTO NOTES",
+    "val_rows": 1,
+    "train_rows": 10,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 10,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "dry up the code",
+    "val_rows": 1,
+    "train_rows": 9,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 9,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\n   **Governing user task** (from earlier sessions, re-issued via `/goal`): **\"l",
+    "val_rows": 1,
+    "train_rows": 7,
+    "distinct_full_first_user": 7,
+    "distinct_full_rows": 7,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "Use the gm skill for this task (invoke Skill(skill=\"gm\") first, follow its instructions: codesearch instead of Grep/Glob",
+    "val_rows": 1,
+    "train_rows": 7,
+    "distinct_full_first_user": 7,
+    "distinct_full_rows": 7,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "You are an expert Canadian medical educator. Extract MCCQE1 flashcards from this textbook text.\n\nTEXT FROM TORONTO NOTES",
+    "val_rows": 1,
+    "train_rows": 7,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 7,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "we're trying to find orphaned or old-implementations that arent part of the main process called by run.js",
+    "val_rows": 1,
+    "train_rows": 6,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 6,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the /gm skill for this work (mcp__gm__gm verbs: codesearch for every search, exec_js to run code; load tool schema v",
+    "val_rows": 1,
+    "train_rows": 6,
+    "distinct_full_first_user": 6,
+    "distinct_full_rows": 6,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n   - Standing autonomous directive (inherited from `/goal`, restated by automate",
+    "val_rows": 1,
+    "train_rows": 5,
+    "distinct_full_first_user": 5,
+    "distinct_full_rows": 5,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "keep going till you're satisfied that its working and as good as it can be, there must be no fallbacks anywhere",
+    "val_rows": 1,
+    "train_rows": 5,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 5,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "we're trying to hunt down duplicate implementations",
+    "val_rows": 1,
+    "train_rows": 4,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 4,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "You are doing WEB RESEARCH ONLY. Do NOT edit, create, or delete ANY file under C:\\dev\\train (the cwd). Return findings i",
+    "val_rows": 1,
+    "train_rows": 4,
+    "distinct_full_first_user": 4,
+    "distinct_full_rows": 4,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (mint your own fresh SESSION_ID distinct from any other session). Repo: C:\\dev\\litebox-main.\n\n",
+    "val_rows": 1,
+    "train_rows": 3,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 3,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "validate and fix this project bridging anthropic api loclaly to nim on the net",
+    "val_rows": 1,
+    "train_rows": 2,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 2,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "```typescript c:\\dev\\mml-react-starter-project\\networked-dom-web-runner-broadcast-example\\src\\index.tsx\n```typescriptrea",
+    "val_rows": 1,
+    "train_rows": 2,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 2,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (mint your own fresh SESSION_ID distinct from any other session). Repo: C:\\dev\\litebox-main.\n\n",
+    "val_rows": 1,
+    "train_rows": 2,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 2,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (mint your own fresh SESSION_ID distinct from any other session). Repo: C:\\dev\\litebox-main.\n\n",
+    "val_rows": 1,
+    "train_rows": 2,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 2,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "These are the git diff from the files which were recently edited sorted by the least recent to the most recent:\n<diff_re",
+    "val_rows": 1,
+    "train_rows": 2,
+    "distinct_full_first_user": 2,
+    "distinct_full_rows": 2,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "we need to fix the server, we're trying to get physics trimesh models generated from the draco glb but we've run into so",
+    "val_rows": 1,
+    "train_rows": 2,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 2,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n   - Standing autonomous directive (`/goal`, still binding, restated by the acti",
+    "val_rows": 1,
+    "train_rows": 2,
+    "distinct_full_first_user": 2,
+    "distinct_full_rows": 2,
+    "class": "distinct_tasks_shared_preamble"
+   },
+   {
+    "prefix_120": "Read-only investigation in C:\\dev\\litebox-main (do NOT edit any file, do NOT run boot runs, do NOT spawn runners — the d",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "now visually aftr the last fix, the map is a small island that appears about 3 player heights under the player\n\nbefore y",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "wait... we had a web search agent working... how did that work",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "put claude in its own filtered out label, dropbox too, give the client transition emails also a filtered label",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "when the user is ahead, we should not reduce the quota, just allow them to finish it early and do more revisions daily, ",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>ac0eebb936022454b</task-id>\n<tool-use-id>toolu_01PjBCH1B3Vt1ho2U8bbFyeF</tool-use-id>\n<outp",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "iterate by testing it and fixing any issues that arise",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "use native fetch",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "why is it so large?",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>bz3fs171b</task-id>\n<tool-use-id>chatcmpl-tool-bed6e4d93aa2b298</tool-use-id>\n<output-file>",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "spawn a subagent to fix it in c:\\dev\\gm",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<summary>Goal check-in: continuing after the last turn ended early</summary>\n</task-notification>\n\n<",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>a85b3ee6da8e1a286</task-id>\n<tool-use-id>chatcmpl-tool-ba61c2967b8e2b82</tool-use-id>\n<outp",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (Skill(skill=\"gm\") first; mint your own fresh SESSION_ID, e.g. \"watchdog-cap-check-<random>\").",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Your name: watchers. Your assigned files: src/watch_network.rs, src/watch_file.rs, src/watch_persistence.rs, src/main.rs",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "In C:\\dev\\gm (the gm tooling repo, rs-plugkit / agentplug-runner spool launcher), diagnose and fix this friction observe",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\n   The user gave one detailed task (verbatim intent preserved below in essentia",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "login done",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Thoroughness: very thorough. READ-ONLY — do not modify any file.\n\nRepo: C:\\dev\\litebox-main (a Linux ABI shim). Target: ",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (gm MCP tool mcp__gm__gm with session_id f73df536-0f66-49a1-8888-2a064d23416a, cwd C:\\dev\\spoi",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>bid7v6wr3</task-id>\n<tool-use-id>chatcmpl-tool-a2b8a6889c7efab6</tool-use-id>\n<output-file>",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Investigate (READ ONLY -- do not edit any file, do not commit) a real audible bug in C:/dev/mc-420.\n\nBug: the shared mon",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "whenever placeholder data is removed, if there is no real calculation in place for it, one must be added to replace it w",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Search this codebase (C:\\dev\\spoint) thoroughly for ALL optimization and compatibility opportunities. I need a comprehen",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>b9ehgxvrn</task-id>\n<tool-use-id>chatcmpl-tool-84c2ad4cfd27bdd4</tool-use-id>\n<output-file>",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "These are the git diff from the files which were recently edited sorted by the least recent to the most recent:\n<diff_re",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "You are improving the `gm` tool itself, whose source lives at C:\\dev\\gm (a Node.js project, `bin: {gm: bin/gm-install.js",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "PS C:\\dev\\video_processing> node .\\scripts\\find-unused.js\r\nUnused files:\r\nC:\\dev\\video_processing\\node_modules\\acorn\\dis",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Repo: C:\\dev\\mc-420 (project \"aloop\"). Task: perform the project's INVARIANT-3 AGENTS.md compaction.\n\nFILE UNDER EDIT: C",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>befkhvz44</task-id>\n<tool-use-id>toolu_01YBW7jgujFazs1U7Hexu9gB</tool-use-id>\n<output-file>",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "In `C:\\dev\\acptoapi`, investigate the claim that \"name 'agentapi' replaced with 'acptoapi' everywhere\". I need to find a",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "The world config (`apps/world/index.js`) contains an `onServerInit` async function and other non-serializable data that'",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "use the gm skill for this. gm friction to fix in C:\\dev\\gm (owner's standing rule): on 2026-09-28 the gm `git_push` verb",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "get any fake metrics out of the system",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\nThe user issued a single, detailed task: compact the working notes of the `lite",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "\"exec:nodejs\nconsole.log('hook-test: ' + process.version)\"",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "on index.html it showed\r\n\nDisplaying 1 metrics out of 6 available.\r\n\n5 metrics were skipped because they contained no da",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>kndm4c263</task-id>\n<status>completed</status>\n<summary>MCP task kndm4c26 (gm/gm) completed",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>bmm3kxwsy</task-id>\n<tool-use-id>toolu_01KJWcS1DfhSxjbp3q5EtiEJ</tool-use-id>\n<output-file>",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "we must set up and integrate our patch previewer (check the preview folder, its example code copied from another develop",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "fix it properly we want to use the x premium _ properly\n\nfix it properly we want to use the x premium _ properly, look a",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Work on .prd item: create-fossils. .prd path: ./.prd. Item:\n- id: create-fossils\n  subject: Create general/fossils.md wi",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "look fruther throughout the codebase and eliminate mocks and hard coded values replacing them with deterministic calcula",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "wait we cant have failed anything if anything failed, we have to redo it",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>kzdcdtebc</task-id>\n<status>completed</status>\n<summary>MCP task kzdcdteb (gm/gm) completed",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (Skill(skill=\"gm\") first; mint your own fresh SESSION_ID \"fssweep-sub-modninep\", distinct from",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>bvdh6dw43</task-id>\n<tool-use-id>toolu_01TQFwiXLh2H68jBXVQmkQCx</tool-use-id>\n<output-file>",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\n   **Original task (first user message):** Compact `C:\\dev\\spoint\\AGENTS.md` be",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "look at the claude code router readme, it claims it can do it",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>a76f72dac295e89f5</task-id>\n<output-file>C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--dev-goo",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>a1fe73f37c5214a57</task-id>\n<tool-use-id>toolu_01WkaoNymojHPkivqP4kkRPg</tool-use-id>\n<outp",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\n   - **Standing implementation request (verbatim, drives the current work):** \"",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "check out the codebases github actions, thats where it got built in the first place",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (mint your own fresh SESSION_ID distinct from any other session). Repo: C:\\dev\\litebox-main.\n\n",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "call the explore tool with it",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n   The user asked me to resolve an in-progress git merge in the Rust repo `C:\\de",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "continue this wip: our wasm builds currently is setup to be able to server a browser setup (c:\\dev\\thebird) that runs ou",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Perform a detailed comparative analysis between C:\\dev\\hyperf (working) and C:\\dev\\hyperfy (broken after refactor).\n\nFor",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "use the gm skill for this. Repo C:\\dev\\freddie (Windows). gm MCP tools for search (no grep/find), no test files, verify ",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>acb2f4c66ad541bdf</task-id>\n<tool-use-id>toolu_01JAV5VeGJsKymuyRvGVhN7Z</tool-use-id>\n<outp",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "use the gm skill for this. Mint your own SESSION_ID (e.g. train-rnn-1). Project: C:\\dev\\train. No comments in code, no c",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>a5d8eda853fcbc909</task-id>\n<tool-use-id>chatcmpl-tool-b4789835ca7f83c3</tool-use-id>\n<outp",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "You are fixing the gm MCP tool daemon. Do NOT touch C:\\dev\\litebox-main (a different project) except to run one verifica",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "[Info] [DEBUG] Starting Phase Two processing\r\n\n[Info] [DEBUG] Using bias file path: ./bias.json\r\n\n[Info] [DEBUG] Executi",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (Skill(skill=\"gm\") first; mint your own fresh SESSION_ID, e.g. \"python3-pie-check-<random>\"). ",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>a5609a4fdb4eb36d5</task-id>\n<tool-use-id>toolu_01So5GtUuzWuTYqneSgzaK3H</tool-use-id>\n<outp",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Use the gm skill for this (Skill(skill=\"gm\") first; mint your own fresh SESSION_ID, e.g. \"agents-compact-<random>\"). If ",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\nThe user gave one brief (no follow-up messages). Verbatim-critical constraints ",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "go ahead and do whats left, and clean up and dry the code as much as you can to maintain it, finish the entire linting p",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "The GLB files have multiple meshes (79 meshes in fy_osama_house.glb), but `extractMeshFromGLBAsync` only loads mesh 0 wh",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\n   The user reports a bug in the `gm` MCP tool (source at `c:\\dev\\gm`), specifi",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "daily quota is the home page, go over every possible aspect of the app and make sure how we set up our daily work makes ",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "<task-notification>\n<task-id>b3v709kul</task-id>\n<summary>Monitor event: \"chrD79 paint verdict stream\"</summary>\n<event>",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "list all the ways we can reduce the shader compile time",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "update it agin",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "with the knowlege you have, with all the info the other model collected (history) make an overview of what work is left ",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "after calling\nnode run .\\keypoint.json .\\complete_metrics.json\nin index.html\nHead Velocities.left - flat line\nHead Veloc",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Continue if you have next steps, or stop and ask for clarification if you are unsure how to proceed.\n\nkeep going dont st",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "I dont want any mocks test flags, test configs and simulations, use the real parts for everything",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   },
+   {
+    "prefix_120": "Summary:\n1. Primary Request and Intent:\n\n   Three explicit user requests in this session, in order:\n\n   a. **\"go ahead a",
+    "val_rows": 1,
+    "train_rows": 1,
+    "distinct_full_first_user": 1,
+    "distinct_full_rows": 1,
+    "class": "identical_task_prompt"
+   }
+  ]
+ }
+}

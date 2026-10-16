@@ -1,0 +1,317 @@
+{
+ "contaminated_val_prefixes": 52,
+ "contaminated_val_rows": 63,
+ "train": {
+  "asst_char_frac": 0.8251,
+  "asst_in_result_frac_of_asst": 0.7949,
+  "bad_json": 0,
+  "distinct_tool_calls": 204,
+  "dup_rows": 2506,
+  "max_chars": 27992,
+  "max_prefix_mult": 93,
+  "mean_asst_chars": 17227.2,
+  "mean_chars": 20878.1,
+  "messages": 19678,
+  "nmsg_hist": {
+   "2": 5850,
+   "4": 583,
+   "6": 252,
+   "8": 126,
+   "10": 85,
+   "12": 35,
+   "14": 14,
+   "16": 21,
+   "18": 8,
+   "20": 12,
+   "22": 5,
+   "24": 3,
+   "26": 6,
+   "28": 4,
+   "30": 5,
+   "32": 1,
+   "34": 3,
+   "46": 1,
+   "48": 1,
+   "54": 1,
+   "58": 1
+  },
+  "p50_chars": 27979,
+  "p90_chars": 27986,
+  "p99_chars": 27986,
+  "prefix_collision_rows": 2870,
+  "result_frac_of_all": 0.6559,
+  "rows": 7017,
+  "top_tool_calls": [
+   [
+    "shell",
+    11651
+   ],
+   [
+    "Bash",
+    7270
+   ],
+   [
+    "bash",
+    4853
+   ],
+   [
+    "mcp__gm__gm",
+    3843
+   ],
+   [
+    "Read",
+    3145
+   ],
+   [
+    "read",
+    3069
+   ],
+   [
+    "PowerShell",
+    1428
+   ],
+   [
+    "shell_command",
+    1130
+   ],
+   [
+    "Skill",
+    827
+   ],
+   [
+    "skill",
+    800
+   ],
+   [
+    "write",
+    719
+   ],
+   [
+    "ToolSearch",
+    705
+   ],
+   [
+    "edit",
+    615
+   ],
+   [
+    "Grep",
+    576
+   ],
+   [
+    "glob",
+    563
+   ],
+   [
+    "Edit",
+    472
+   ],
+   [
+    "grep",
+    454
+   ],
+   [
+    "SendMessage",
+    406
+   ],
+   [
+    "Monitor",
+    341
+   ],
+   [
+    "run_shell_command",
+    323
+   ],
+   [
+    "Agent",
+    310
+   ],
+   [
+    "Write",
+    306
+   ],
+   [
+    "webfetch",
+    218
+   ],
+   [
+    "ListAgents",
+    188
+   ],
+   [
+    "mcp__gm__gm_instruction",
+    183
+   ],
+   [
+    "read_file",
+    174
+   ],
+   [
+    "dev_execute",
+    170
+   ],
+   [
+    "ScheduleWakeup",
+    167
+   ],
+   [
+    "mcp__claude-in-chrome__computer",
+    157
+   ],
+   [
+    "copilot_readFile",
+    152
+   ]
+  ],
+  "unique_prefixes": 4511
+ },
+ "val": {
+  "asst_char_frac": 0.8165,
+  "asst_in_result_frac_of_asst": 0.8026,
+  "bad_json": 0,
+  "distinct_tool_calls": 47,
+  "dup_rows": 11,
+  "max_chars": 27986,
+  "max_prefix_mult": 3,
+  "mean_asst_chars": 17081.8,
+  "mean_chars": 20921.4,
+  "messages": 356,
+  "nmsg_hist": {
+   "2": 122,
+   "4": 13,
+   "6": 4,
+   "8": 2,
+   "10": 2
+  },
+  "p50_chars": 27986,
+  "p90_chars": 27986,
+  "p99_chars": 27986,
+  "prefix_collision_rows": 20,
+  "result_frac_of_all": 0.6553,
+  "rows": 143,
+  "top_tool_calls": [
+   [
+    "shell",
+    232
+   ],
+   [
+    "Bash",
+    124
+   ],
+   [
+    "read",
+    93
+   ],
+   [
+    "mcp__gm__gm",
+    90
+   ],
+   [
+    "bash",
+    81
+   ],
+   [
+    "Read",
+    71
+   ],
+   [
+    "glob",
+    39
+   ],
+   [
+    "PowerShell",
+    36
+   ],
+   [
+    "Grep",
+    23
+   ],
+   [
+    "Skill",
+    21
+   ],
+   [
+    "write",
+    17
+   ],
+   [
+    "ToolSearch",
+    14
+   ],
+   [
+    "edit",
+    13
+   ],
+   [
+    "run_shell_command",
+    12
+   ],
+   [
+    "grep",
+    12
+   ],
+   [
+    "Edit",
+    11
+   ],
+   [
+    "shell_command",
+    10
+   ],
+   [
+    "skill",
+    10
+   ],
+   [
+    "SendMessage",
+    7
+   ],
+   [
+    "Glob",
+    4
+   ],
+   [
+    "TaskStop",
+    4
+   ],
+   [
+    "mcp__docmcp__gmail_create_label",
+    3
+   ],
+   [
+    "mcp__docmcp__gmail_create_filter",
+    3
+   ],
+   [
+    "mcp__docmcp__gmail_bulk_modify_labels",
+    3
+   ],
+   [
+    "mcp__docmcp__gmail_search",
+    3
+   ],
+   [
+    "Agent",
+    3
+   ],
+   [
+    "mcp__gm__gm_instruction",
+    3
+   ],
+   [
+    "ScheduleWakeup",
+    3
+   ],
+   [
+    "mcp__chrome-devtools__evaluate_script",
+    3
+   ],
+   [
+    "dev_execute",
+    2
+   ]
+  ],
+  "unique_prefixes": 132
+ },
+ "val_rows_in_train_prefix": 1000
+}

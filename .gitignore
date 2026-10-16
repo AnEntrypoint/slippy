@@ -1,0 +1,17 @@
+.env
+.gm/
+.claude/
+.agentplug-kv/
+
+trainingdata/
+
+sidecar/kaggle_pkg/
+sidecar/kaggle_out/
+sidecar/tokstats.json
+
+__pycache__/
+*.pyc
+*.pt
+*.pkl
+*.kaggle*
+.tmp_w3/
