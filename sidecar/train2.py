@@ -296,6 +296,8 @@ def fill_cache(cache, backbone, seqs, idxs, length, rng, mask, pack, device, rea
         cache["weights"][i] = torch.tensor(w, dtype=torch.uint8)
         cache["argmax"][i] = argmax_pred.to(torch.int32).cpu()
         cache["base_ce"][i] = ((token_ce * wt).sum() / wt.sum().clamp(min=1.0)).item()
+        cache.setdefault("block_id", {})[i] = hashlib.blake2b(
+            torch.tensor(ids, dtype=torch.int32).numpy().tobytes(), digest_size=8).hexdigest()
         for read_index, layer_index in enumerate(read_layers):
             cache["hidden"][read_index][i] = hs[layer_index][0].detach().to(cache["hidden"][read_index].dtype).cpu()
     del x, y, wt, hs, final_hidden, argmax_pred
@@ -598,6 +600,7 @@ def train_one(base_args, name, prefix, overrides, ctx, budget):
               "base_ce": val_base, "sidecar_ce": corr, "delta": corr - val_base,
               "best_val_ce": best_val_ce, "best_delta": best_val_ce - val_base,
               "val_window_ce": val_window_ce, "base_window_ce": list(val_cache["base_ce"]),
+              "val_block_id": [val_cache["block_id"][i] for i in range(len(val_cache["base_ce"]))],
               "val_fingerprint": ctx["val_fingerprint"],
               "steps": steps_done, "params_M": count_params(sidecar) / 1e6,
               "refill_s": round(fill_overhead, 1),
