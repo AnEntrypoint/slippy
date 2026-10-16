@@ -19,7 +19,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from sidecar2 import Sidecar, count_params, sidecar_loss
 from accel import attn_implementation, device_dtype, empty_cache, is_cuda, is_oom, is_xla, mark_step
 from accel import memory_stats, model_hidden_states, optimizer_step, pick_device, reset_peak
-from accel import sync, to_device
+from accel import device_label, sync, to_device
 
 BACKBONE = "LiquidAI/LFM2-350M"
 LOG_FILE = None
